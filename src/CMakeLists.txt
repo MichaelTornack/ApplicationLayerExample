@@ -1,18 +1,18 @@
 
-file(GLOB CMakeGoogleTest_SRC
+file(GLOB PROJECT_SRC
      "*.cpp"
 )
 
 # Lib used to link with google_test
-add_library(CMakeGoogleTestLib ${CMakeGoogleTest_SRC})
+add_library(${PROJECT_NAME}Lib ${PROJECT_SRC})
 
-target_include_directories(CMakeGoogleTestLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(${PROJECT_NAME}Lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 
 # Main Executable. In this case not needed
-add_executable(CMakeGoogleTest main.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
 
-target_link_libraries(CMakeGoogleTest PRIVATE CMakeGoogleTestLib)
+target_link_libraries(${PROJECT_NAME} PRIVATE ${PROJECT_NAME}Lib)
 
 
 

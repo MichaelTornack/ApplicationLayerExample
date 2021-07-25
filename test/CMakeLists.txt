@@ -11,5 +11,5 @@ target_include_directories(Unittests PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 target_link_libraries(Unittests
     gtest_main
-    CMakeGoogleTestLib
+    ${PROJECT_NAME}Lib
 )
