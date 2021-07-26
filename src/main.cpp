@@ -1,6 +1,9 @@
 #include "myclass.h"
+#include <QCoreApplication>
 
-int main () {
+int main (int argc, char **argv) {
+
+    QCoreApplication app(argc, argv);
 
     MyClass obj;
     obj.isValid();
